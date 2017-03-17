@@ -1,0 +1,13 @@
+﻿<p> These are the grades you are currently recieving {{account.getUserName()}}. <br />
+    If you have a grade lower than 60% <br />
+    proceed to the office for your mandatory beating.</p>
+
+
+
+<div class="row" ng-repeat="class in controller.classes"> 
+    <h2>Subject: {{class.subject}}| Grade: {{class.grade}}%</h2>              
+</div>
+
+<p>
+    Remember....we beat you because we care... <br/>
+</p>

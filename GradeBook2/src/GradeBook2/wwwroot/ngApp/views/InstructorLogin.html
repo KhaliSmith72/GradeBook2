@@ -1,0 +1,31 @@
+﻿<h3>Greetings Stephen, we have been expecting you...</h3>
+
+
+<div class="col-md-4">
+    
+    <p>
+        Edit a students grade here. Their fate is in your tiny, tiny hands...<br />
+    </p>
+    <div ng-repeat="Class in controller.classes" ui-sref="studentDetails({id: Class.lastName})">
+        {{Class.id}}
+        {{Class.firstName}}
+        {{Class.lastName}}
+        {{Class.gradeLevel}}
+        <!--{{Class.grade}}-->
+        {{Class.userName}}
+        </div>
+    <form ng-submit="controller.editGrade(class)">
+        <div>
+            <input type="text" ng-model="controller.class.grade" />
+        </div>
+        <input type="submit" value="Edit Grade" />
+        
+    </form>
+</div>
+
+<div class="col.md=6">
+    <div>
+       
+    </div>
+    <input type="button" value="Delete Student" ng-click="controller.removeUser(classes.studentId)" />
+</div>

@@ -1,0 +1,32 @@
+﻿<h2>Student Details Page</h2>
+<div class="col-md-12">
+    <div>
+        {{controller.user.firstName}}
+        {{controller.user.lastName}}
+        {{controller.user.gradeLevel}}
+
+    </div>
+    <input type="button" value="Delete Student" ng-click="controller.removeUser(user)" />
+</div>
+<div class="row" ng-repeat="class in controller.user.classes">
+    <div>
+
+
+        <div class="col-md-3">
+            {{class.subject}}
+            {{class.grade}}%<input type="number" ng-model="class.grade" id="Number" />
+            <form ng-submit="controller.editGrade(class)">
+                <input type="submit" value="Edit Grade" />
+                
+            </form>
+            <input type="button" value="Delete Class" ng-click="controller.removeClass(class)" />
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-5">
+    <h3>Edit this students grade</h3>
+
+
+</div>
